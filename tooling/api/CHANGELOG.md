@@ -1,5 +1,10 @@
 # Changelog
 
+## \[1.0.0-rc.4]
+
+- Encode the file path in the `convertFileSrc` function.
+  - [42e8d9cf](https://www.github.com/tauri-apps/tauri/commit/42e8d9cf925089e9ad591198ee04b0cc0a0eed48) fix(api): encode file path in `convertFileSrc` function, closes [#3841](https://www.github.com/tauri-apps/tauri/pull/3841) ([#3846](https://www.github.com/tauri-apps/tauri/pull/3846)) on 2022-04-02
+
 ## \[1.0.0-rc.3]
 
 - Properly define the `appWindow` type.

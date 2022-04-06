@@ -1,5 +1,24 @@
 # Changelog
 
+## \[1.0.0-rc.7]
+
+- Set the application bundle identifier for the notifications on macOS.
+  - [f67ae6bd](https://www.github.com/tauri-apps/tauri/commit/f67ae6bd6052d5bc30305ecaa3b83d071da3cfca) fix(core): set bundle id for notifications on macOS ([#3839](https://www.github.com/tauri-apps/tauri/pull/3839)) on 2022-04-01
+- Fixes the `WindowBuilder` export.
+  - [985d2508](https://www.github.com/tauri-apps/tauri/commit/985d250898f07ebc975b579ea25555337947ab76) fix(tauri): export `WindowBuilder` struct instead of trait, closes [#3827](https://www.github.com/tauri-apps/tauri/pull/3827) ([#3833](https://www.github.com/tauri-apps/tauri/pull/3833)) on 2022-03-31
+- **Breaking change:** The `api::http` timeouts are now represented as `std::time::Duration` instead of a `u64`.
+  - [0ecfad59](https://www.github.com/tauri-apps/tauri/commit/0ecfad5924d7e19719812fd2e460e5242d8f352f) refactor(updater): unset request timeout, add builder setter ([#3847](https://www.github.com/tauri-apps/tauri/pull/3847)) on 2022-04-02
+- **Breaking change:** Removed `App::create_window`, `AppHandle::create_window`, `Builder::create_window` and `Window::create_window`.
+  - [7c7d854a](https://www.github.com/tauri-apps/tauri/commit/7c7d854ab9183d3f78bafd9027f0304d84abe159) refactor(core): remove deprecated APIs ([#3834](https://www.github.com/tauri-apps/tauri/pull/3834)) on 2022-04-01
+- Added `UpdateResponse::body` and `UpdateResponse::date`.
+  - [c7696f34](https://www.github.com/tauri-apps/tauri/commit/c7696f34ecb7baa0da583736e727f74a01f5996a) feat(updater): add `body` and `date` getters ([#3802](https://www.github.com/tauri-apps/tauri/pull/3802)) on 2022-03-29
+- **Breaking change**: Removed the `tauri::updater::Error::UnsupportedPlatform` variant and added `UnsupportedLinuxPackage`, `UnsupportedOs` and `UnsupportedArch` for better error information.
+  - [ed716793](https://www.github.com/tauri-apps/tauri/commit/ed71679368845f603680465fdffcc90fe842bb8c) refactor(updater): improve unsupported error variants, closes [#3817](https://www.github.com/tauri-apps/tauri/pull/3817) ([#3849](https://www.github.com/tauri-apps/tauri/pull/3849)) on 2022-04-05
+- Add updater `Downloaded` status event.
+  - [9712ed1a](https://www.github.com/tauri-apps/tauri/commit/9712ed1a6893438270e99cfecbc7968b68716cba) feat(updater): add `Downloaded` status event ([#3804](https://www.github.com/tauri-apps/tauri/pull/3804)) on 2022-04-01
+- The updater default timeout is now unset, and the `UpdateBuilder` has a `timeout` setter.
+  - [0ecfad59](https://www.github.com/tauri-apps/tauri/commit/0ecfad5924d7e19719812fd2e460e5242d8f352f) refactor(updater): unset request timeout, add builder setter ([#3847](https://www.github.com/tauri-apps/tauri/pull/3847)) on 2022-04-02
+
 ## \[1.0.0-rc.6]
 
 - Fixes the `WindowEvent` type used on `Window::on_window_event`.

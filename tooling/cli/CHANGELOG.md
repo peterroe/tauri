@@ -1,5 +1,17 @@
 # Changelog
 
+## \[1.0.0-rc.9]
+
+- The CLI will not automatically run `strip` on release binaries anymore. Use the \[`strip`]\[strip] profile setting stabilized with Cargo 1.59.
+
+[`strip`]: https://doc.rust-lang.org/cargo/reference/profiles.html#strip
+
+- [62106224](https://www.github.com/tauri-apps/tauri/commit/621062246d065f21800d340126cf58315177f97e) refactor: drop strip from build command. closes [#3559](https://www.github.com/tauri-apps/tauri/pull/3559) ([#3863](https://www.github.com/tauri-apps/tauri/pull/3863)) on 2022-04-06
+- Fix `info` command showing outdated text for latest versions.
+  - [73a4b74a](https://www.github.com/tauri-apps/tauri/commit/73a4b74aea8544e6fda51c1f6697630b0768072c) fix(cli.rs/info):  don't show outdated text for latest versions ([#3829](https://www.github.com/tauri-apps/tauri/pull/3829)) on 2022-04-02
+- Kill the `beforeDevCommand` process recursively on Unix.
+  - [e251e1b0](https://www.github.com/tauri-apps/tauri/commit/e251e1b0991d26ab10aea33cfb228f3e7f0f85b5) fix(cli): kill before dev command recursively on Unix, closes [#2794](https://www.github.com/tauri-apps/tauri/pull/2794) ([#3848](https://www.github.com/tauri-apps/tauri/pull/3848)) on 2022-04-03
+
 ## \[1.0.0-rc.8]
 
 - Allows the `tauri.conf.json` file to be git ignored on the path lookup function.
